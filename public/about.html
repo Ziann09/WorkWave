@@ -1,0 +1,49 @@
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About Us - WorkWave</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <img src="logor.png" alt="WorkWave Logo">
+                    <p>WorkWave</p>
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="about.html" id="about-link" class="nav-link">About Us</a></li>  
+                    <li><a href="login.html">Logout</a></li>
+                    <ul>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var aboutLink = document.getElementById('about-link');
+    
+            if (aboutLink) {
+                aboutLink.classList.add('active');
+            }
+        });
+    </script>
+        
+
+    <div class="about-content">
+        <h2>Tentang Kami</h2>
+        <p>Selamat datang di WorkWave, tempat di mana kami membangun tim yang dinamis dan bersemangat untuk menciptakan perubahan. Kami percaya bahwa pekerja hebat dapat menghasilkan karya luar biasa.</p>
+        <p>Di WorkWave, kami menghadirkan kesempatan bagi individu yang memiliki semangat, keahlian, dan dedikasi untuk bergabung dengan kami dalam mencapai visi dan misi kami. Kami membuka pintu untuk bakat baru yang ingin berkembang dan memberikan dampak positif di dunia kerja.</p>
+        <p>Bergabunglah dengan kami dan menjadi bagian dari perjalanan kami untuk menciptakan lingkungan kerja yang inspiratif, inovatif, dan penuh prestasi. Bersama-sama, kita bisa meraih potensi terbaik kita!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+</body>
+</html>
