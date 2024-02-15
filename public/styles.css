@@ -1,4 +1,4 @@
- body {
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -34,10 +34,18 @@ nav a {
     margin-left: auto;
 }
 
+p {
+    color: #21498f;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+
+
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 12px; 
+    margin-left: 12px;
 }
 
 .logo img {
@@ -49,9 +57,6 @@ nav a {
     margin: 0;
 }
 
-#home-link {
-    margin-left: 40px; 
-}
 
 #content {
     display: flex;

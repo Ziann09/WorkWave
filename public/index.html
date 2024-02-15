@@ -48,6 +48,8 @@
         .active {
             color: #000000;
         }
+      
+
     </style>
     
     <div class="iklan">
@@ -69,9 +71,7 @@
     
         
     </style>
-    
-    
-    
+   
     
       <div id="app">
         <div class="search-box">
@@ -101,6 +101,17 @@
       </div>
 
       <script>
+        document.getElementById('barista-image').addEventListener('click', function() {
+            var jobDetailsContainer = document.getElementById('job-details-container');
+            if (jobDetailsContainer.style.display === 'none') {
+                jobDetailsContainer.style.display = 'block';
+            } else {
+                jobDetailsContainer.style.display = 'none';
+            }
+        });
+    </script>
+
+      <script>
         document.addEventListener('DOMContentLoaded', function () {
             var homeLink = document.getElementById('home-link');
     
@@ -117,16 +128,14 @@
             el: '#app',
             data: {
                 members: [
-                    { initial: "BARISTA", image: "barista1.jpg", link: "https://id.indeed.com/rc/clk?jk=07a92e7334035d88&bb=0hRj4-7SuMrbGkaX2D1-Sn7vsjI4A02PJTJfkC79hqwfH3M-ed85pzxma72IoVnrEFt-Hc_2zw_H7WPz3wYQbqvoaQi6F74ZKdKNDlGogiw%3D&xkcb=SoA_67M3FfPMLlWTLh0MbzkdCdPP&fccid=f9660022fcbb0761&cmp=Dinasty-catering&ti=Barista&vjs=3" },
-                    { initial: "KASIR", image: "kasir.jpg", link: "https://id.indeed.com/rc/clk?jk=607921bd63e3ffef&bb=UDt_TQ2CE-TX9nr21vYcRkP_5VLbR87PYFILVKahqnsTb0tc4UP7r77QMUkh_SC5btAuV0z7KMML5M8IAlm7OXn7Y6rAY1kA4IvqbgQ1pSI%3D&xkcb=SoD167M3FfPgSoQJRp0LbzkdCdPP&fccid=9ed1d6a0ee6dd510&cmp=saung-kemangi&ti=Food+%26+Beverage+Manager&vjs=3" },
-                    { initial: "PROGRAMMER", image: "prog.jpg", link: "https://id.indeed.com/rc/clk?jk=6f0463649f499483&bb=dv3F78Hk9oVsW8YVTHfH6SHeWWgm6Q9-KmbYTvbVMuCAnic1E73FCVF8wgKufS1_-lA-GX9yzfo_mmJis8oBLjxjQJyow73o9B3477H51Jg%3D&xkcb=SoAQ67M3FfPnpyQJYB0LbzkdCdPP&fccid=091a4563cf6bdd29&cmp=PT.-Hattori-Indonesia&ti=Programmer&vjs=3" },
-                    { initial: "BARBERSHOP", image: "barber.jpg", link: "https://id.jora.com/job/rd/e71aae10aac8b72e0b45d774bfd587d4?abstract_type=original&sp=sserp_top&sponsored=true&sr=1&tk=JVRw56CNImxFTVBHHvMf-T16TdmwQ3oCCYdcoVMgx" },
-                    { initial: "CLEANING SERVICE", image: "CS.jpg", link: "https://id.indeed.com/rc/clk?jk=07a92e7334035d88&bb=0hRj4-7SuMrbGkaX2D1-Sn7vsjI4A02PJTJfkC79hqwfH3M-ed85pzxma72IoVnrEFt-Hc_2zw_H7WPz3wYQbqvoaQi6F74ZKdKNDlGogiw%3D&xkcb=SoA_67M3FfPMLlWTLh0MbzkdCdPP&fccid=f9660022fcbb0761&cmp=Dinasty-catering&ti=Barista&vjs=3" },
-                    { initial: "ADMIN MEDSOS", image: "ADMIN.jpg", link: "https://id.indeed.com/rc/clk?jk=607921bd63e3ffef&bb=UDt_TQ2CE-TX9nr21vYcRkP_5VLbR87PYFILVKahqnsTb0tc4UP7r77QMUkh_SC5btAuV0z7KMML5M8IAlm7OXn7Y6rAY1kA4IvqbgQ1pSI%3D&xkcb=SoD167M3FfPgSoQJRp0LbzkdCdPP&fccid=9ed1d6a0ee6dd510&cmp=saung-kemangi&ti=Food+%26+Beverage+Manager&vjs=3" },
-                    { initial: "CUSTOMER SERVICE", image: "CS1.jpg", link: "https://id.indeed.com/rc/clk?jk=6f0463649f499483&bb=dv3F78Hk9oVsW8YVTHfH6SHeWWgm6Q9-KmbYTvbVMuCAnic1E73FCVF8wgKufS1_-lA-GX9yzfo_mmJis8oBLjxjQJyow73o9B3477H51Jg%3D&xkcb=SoAQ67M3FfPnpyQJYB0LbzkdCdPP&fccid=091a4563cf6bdd29&cmp=PT.-Hattori-Indonesia&ti=Programmer&vjs=3" },
-                    { initial: "SATPAM", image: "SATPAM.jpg", link: "https://id.jora.com/job/rd/e71aae10aac8b72e0b45d774bfd587d4?abstract_type=original&sp=sserp_top&sponsored=true&sr=1&tk=JVRw56CNImxFTVBHHvMf-T16TdmwQ3oCCYdcoVMgx" },
-                    { initial: "SEKRETARIS", image: "SEKRETARIS.jpg", link: "https://id.indeed.com/rc/clk?jk=6f0463649f499483&bb=dv3F78Hk9oVsW8YVTHfH6SHeWWgm6Q9-KmbYTvbVMuCAnic1E73FCVF8wgKufS1_-lA-GX9yzfo_mmJis8oBLjxjQJyow73o9B3477H51Jg%3D&xkcb=SoAQ67M3FfPnpyQJYB0LbzkdCdPP&fccid=091a4563cf6bdd29&cmp=PT.-Hattori-Indonesia&ti=Programmer&vjs=3" },
-                    { initial: "STAFF GUDANG", image: "SG.jpg", link: "https://id.jora.com/job/rd/e71aae10aac8b72e0b45d774bfd587d4?abstract_type=original&sp=sserp_top&sponsored=true&sr=1&tk=JVRw56CNImxFTVBHHvMf-T16TdmwQ3oCCYdcoVMgx" }
+                    { initial: "BARISTA", image: "barista1.jpg", link: "barista.html" },
+                    { initial: "KASIR", image: "kasir.jpg", link: "kasir.html" },
+                    { initial: "PROGRAMMER", image: "prog.jpg", link: "programmer.html" },
+                    { initial: "BARBERSHOP", image: "barber.jpg", link: "Barber.html" },
+                    { initial: "ADMIN MEDSOS", image: "ADMIN.jpg", link: "admin.html" },
+                    { initial: "CUSTOMER SERVICE", image: "CS1.jpg", link: "CS.html" },
+                    { initial: "SATPAM", image: "SATPAM.jpg", link: "satpam.html" },
+                    { initial: "STAFF GUDANG", image: "SG.jpg", link: "staff.html" }
                 ],
                 searchKeyword: '',
                 searchResults: [],
@@ -149,5 +158,6 @@
             window.location.href = "http://127.0.0.1:5500/public/login.html";
         }
     </script>
+
     </body>
     </html>
