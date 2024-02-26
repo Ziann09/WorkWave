@@ -48,6 +48,7 @@
         .active {
             color: #000000;
         }
+        
       
 
     </style>
@@ -67,22 +68,12 @@
             margin: 0; 
             padding: 0; 
         }
-        
-    
-        
     </style>
    
     
       <div id="app">
         <div class="search-box">
             <input type="text" placeholder="Nama Pekerjaan" v-model="searchKeyword">
-            <div class="container">
-                <select class="city-select">
-                  <option value="city1">Kota Bandung</option>
-                  <option value="city2">Kabupaten Bandung</option>
-                  <option value="city3">Cimahi</option>
-                </select>
-              </div>
             <button class="search-button" @click="search">Cari</button>
         </div>
     
@@ -99,7 +90,31 @@
             <p v-else>Masukkan kata kunci untuk mencari pekerjaan dan temukan pekerjaan sesuai dengan kemampuan Anda.</p>
         </div>
       </div>
+      <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text">WorkWave</h1>
+                <p>
+                    WorkWave adalah platform yang menyediakan berbagai pekerjaan untuk berbagai keahlian. Temukan pekerjaan
+                    impian Anda dengan kami.
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> 123-456-789</span>
+                    <span><i class="fas fa-envelope"></i> workwave@gmail.com</span>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
 
+<div class="footer-bottom">
+            &copy; 2024 WorkWave |Eziansyah
+        </div>
+    </footer>
+
+    
       <script>
         document.getElementById('barista-image').addEventListener('click', function() {
             var jobDetailsContainer = document.getElementById('job-details-container');
@@ -133,7 +148,7 @@
                     { initial: "PROGRAMMER", image: "prog.jpg", link: "programmer.html" },
                     { initial: "BARBERSHOP", image: "barber.jpg", link: "Barber.html" },
                     { initial: "ADMIN MEDSOS", image: "ADMIN.jpg", link: "admin.html" },
-                    { initial: "CUSTOMER SERVICE", image: "CS1.jpg", link: "CS.html" },
+                    { initial: "CUSTOMER SERVICE", image: "CS.jpg", link: "CS.html" },
                     { initial: "SATPAM", image: "SATPAM.jpg", link: "satpam.html" },
                     { initial: "STAFF GUDANG", image: "SG.jpg", link: "staff.html" }
                 ],

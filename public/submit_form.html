@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="isi.css">
+    <title>Data Submission Confirmation</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Your navigation code if needed -->
+        </nav>
+    </header>
+
+    <div class="confirmation-container">
+        <h2>Terima kasih!</h2>
+        <p>Terima kasih telah mengisi data diri Anda. Berikut adalah data yang telah Anda masukkan:</p>
+
+        <p>Tim kami akan segera menghubungi Anda. Terima kasih atas partisipasinya!</p>
+    </div>
+
+    <form id="data-form" action="barista.html" method="post">
+        <!-- Your form fields go here -->
+        <input type="submit" value="Submit">
+    </form>
+    
+    
+    
+    <script>
+        function toggleForm() {
+            var form = document.getElementById("data-form");
+            form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+    
+            // Scroll to the form section
+            if (form.style.display === "block") {
+                form.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Optionally, you can perform any form validation here before submitting
+    
+            // Redirect to the confirmation page after a brief delay
+            setTimeout(function () {
+                window.location.href = 'barista.html';
+            }, 5000); // Adjust the delay as needed
+        }
+    </script>
+    
+    
+    
+    
+</body>
+</html>
