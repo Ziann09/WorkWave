@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'San Francisco', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -71,6 +71,7 @@ p {
     border: none;
     cursor: pointer;
 }
+
 
 #app {
     text-align: center;
@@ -155,16 +156,26 @@ video::-moz-media-controls-play-button {
 }
 
 .search-box {
-    display: flex;
-    align-items: center;
-    margin-left: 33%;
+    display: inline-block;
+    position: relative;
+    animation: slideInFromTop 0.5s ease-out; /* Menggunakan animasi slideInFromTop */
 }
 
-.city-select {
-    margin-left: 10px;
-}
 
 .search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #145bcd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.search-button:hover {
+    background-color: #595f59;
+}
+.city-select {
     margin-left: 10px;
 }
 
@@ -186,3 +197,15 @@ video::-moz-media-controls-play-button {
 button {
     cursor: pointer;
 } 
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #de940c;
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+

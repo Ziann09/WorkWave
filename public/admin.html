@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="isi.css">
     <title>WorkWave - Job Details</title>
 </head>
 <body>
@@ -28,29 +28,96 @@
         <center>  <h1>Admin Sosial Media</h1>
        <img src="ADMIN.jpg" alt="Admin Image"></center>
         <p>
-            As a Barista, you will be responsible for preparing and serving a variety of hot and cold drinks for customers.
-            Your key responsibilities include greeting customers, taking orders, and ensuring an efficient and high-quality
-            service throughout the day.
+            Sebagai seorang admin media sosial, Anda akan bertanggung jawab untuk 
+            mengelola dan menyajikan konten yang menarik di berbagai platform sosial kepada audiens. 
+            Tanggung jawab utama Anda melibatkan menyambut pengikut, mengelola pesan dan tanggapan, 
+            serta memastikan operasional yang efisien dan kualitas tinggi sepanjang waktu.
         </p>
-        <h2>Key Responsibilities</h2>
+        <h2>Tanggung jawab</h2>
         <ul>
-            <li>Prepare and serve a range of hot and cold drinks</li>
-            <li>Greet customers and take orders</li>
-            <li>Maintain a clean and organized workspace</li>
-            <li>Work effectively as part of a team</li>
+            <li>Mengelola Konten</li>
+            <li>Berinteraksi dengan Pengikut</li>
+            <li>Menganalisis Kinerja</li>
+            <li>Menjalankan Kampanye Promosi</li>
         </ul>
-        <h2>Requirements</h2>
+        <h2>Kriteria</h2>
         <ul>
-            <li>Previous experience in a similar role is preferred</li>
-            <li>Excellent communication and customer service skills</li>
-            <li>Ability to work well under pressure</li>
-            <li>Familiarity with a variety of coffee drinks and preparation techniques</li>
+            <li>Kemampuan menulis dan berbicara yang baik untuk menghasilkan konten yang menarik dan efektif.</li>
+            <li>Kemampuan untuk merancang dan mengembangkan ide konten yang kreatif dan inovatif.</li>
+            <li>Pengetahuan yang kuat tentang berbagai platform media sosial (Facebook, Instagram, Twitter, LinkedIn, dll.).</li>
+            <li>Efisien dalam menanggapi pertanyaan dan komentar pengikut tanpa menunda.</li>
         </ul>
+
+    <button id="show-form-btn" onclick="toggleForm()">Isi Data Diri</button>
+
+        <div id="data-form">
+            <h2>Data Diri dan Formulir</h2>
+            <form action="submit_form.php" method="post">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required><br>
+
+                <label for="asal">Asal Kelahiran:</label>
+                <input type="text" id="nama" name="nama" required><br>
+                
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" rows="4" required></textarea><br>
+
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Add your footer code here -->
-    </footer>
+    <script>
+        function toggleForm() {
+            var form = document.getElementById("data-form");
+            form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+    
+            // Scroll to the form section
+            if (form.style.display === "block") {
+                form.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    
+        function showPopup(message) {
+            var popupMessage = document.getElementById("popup-message");
+            popupMessage.innerText = message;
+            document.getElementById("popup").style.display = "block";
+    
+            // Tutup pop-up secara otomatis setelah 3000 milidetik (3 detik)
+            setTimeout(function () {
+                closePopup();
+            }, 3000);
+        }
+    
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    
+        function showSuccessPopup() {
+    console.log("Button Clicked");
+    showPopup("Formulir berhasil dikirim! Terima kasih atas informasi yang telah Anda berikan.");
+}
+        document.addEventListener("DOMContentLoaded", function () {
+            var submitButton = document.querySelector("#data-form input[type='submit']");
+            if (submitButton) {
+                submitButton.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent the form from submitting (to demonstrate the popup)
+                    showSuccessPopup();
+                });
+            }
+        });
+    </script>
+    <div id="popup" class="popup">
+        <p id="popup-message" class="popup-message"></p>
+    </div>
 </body>
 </html>
